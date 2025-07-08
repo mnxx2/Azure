@@ -9,7 +9,7 @@ Create New Web App... (Advanced)
 4. 웹 앱 정보 입력
 - 이름: api[SUFFIX]
 - 리소스 그룹: rg-paaslab
-- 런타임 스택: .NET 6 (LTS)
+- 런타임 스택: .NET 8 (LTS)
 - OS: Windows
 - 위치: East US
 - 앱 서비스 요금제: asp-windows

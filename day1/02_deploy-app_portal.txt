@@ -3,10 +3,10 @@
 - 리소스 그룹: rg-paaslab
 - 이름: web[SUFFIX]
 - 게시: 코드
-- 런타임 스택: .NET 6
+- 런타임 스택: .NET 8
 - 운영 체제: Windows
 - 지역: East US
-- 플랜: asp-windows / Premium V2 P1v2
+- 플랜: asp-windows / Premium V3 P0v3
 - 영역 중복: 사용
 
 3. [배포]
