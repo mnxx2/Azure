@@ -1,0 +1,27 @@
+#0. sudo 없이 도커 사용
+sudo usermod -aG docker tony
+sudo -su tony
+sudo chmod 666 /var/run/docker.sock
+ 
+#1. 이미지 검색
+
+docker search --limit 5  mysql
+docker search --limit 10 guestbook
+
+#2. 이미지 내려 받기
+##Docker Hub 레지스트리에서 ASP.NET Sample 앱 이미지 검색
+# 실제 이미지는 samples :aspnetapp은 버전 mcr.micosoft.com/dotnet/은 네임스페이스
+docker image pull mcr.microsoft.com/dotnet/samples:aspnetapp
+# 가져오려는 이미지는 arm아키텍쳐인데 사용중인 맥은 silicon아키텍처이기 때문에 에러 발생
+docker pull mcr.microsoft.com/azuredocs/aci-helloworld
+# m3 apple silicon에 맞게 수정 -> 가져올 수는 있지만 실행할 때는 문제가 있을 수 있음
+docker pull --platform linux/amd64 mcr.microsoft.com/azuredocs/aci-helloworld
+
+#3. 이미지 목록 확인
+docker image ls
+docker images
+
+#4. 이미지에 태그(새로운 이름) 추가
+docker image tag mcr.microsoft.com/azuredocs/aci-helloworld hello.docker/aci-helloworld:latest
+docker tag mcr.microsoft.com/dotnet/samples:aspnetapp hello.docker/samples
+

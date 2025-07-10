@@ -1,0 +1,60 @@
+#1. 컨테이너 생성 및 실행
+##Dockerfile 인스트럭션 재정의
+# 로컬에 없으면 가져와서 실행
+docker container run -it alpine
+docker run -it alpine uname -a
+
+#2. 컨테이너에 원하는 이름 부여하기
+docker container run -d --name helloworld mcr.microsoft.com/azuredocs/aci-helloworld
+docker run -d --name samples hello.docker/samples
+docker ps
+
+#3. 컨테이너 포그라운드 실행 (중지: ctrl + c)
+docker container run --name firstnode firstnode-app:1.0
+
+#4. 지정 포트로 컨테이너 백그라운드 실행.
+docker container run --name guestbook-app -d -p 80:3000 guestbook-app
+
+#5. 실행 중인 도커 컨테이너의 ID만 표시
+docker container ls -q
+
+#6. 실행 중인 도커 컨테이너 필터링 후 표시
+docker container ls --filter "name=guestbook"
+
+#7. 종료된 컨테이너 목록
+docker container ls -a
+docker ps -a
+
+#8. 컨테이너 종료
+docker container stop helloworld
+
+#9. 컨테이너 재시작
+docker container restart firstnode
+
+#10. 컨테이너 파기
+docker container rm <CONTAINER_ID>
+docker container rm 45ec2f3b7657
+
+#11. 실행 중인 컨테이너에 명령 실행 -> 나올 땐 exit
+docker container exec <CONTAINER_ID/CONTAINER_NAME> pwd
+# 실행 중인 컨테이너의 경로 : /app
+docker container exec dfb05b1b1de2 pwd
+# bash의 형태로 실행 중인 컨테이너에 명령 입력 : cd, mv 등
+docker container exec -it guestbook-app bash
+
+#docker container exec 49504cf6f22d pwd 
+#docker container exec firstnode pwd
+# sh는 리눅스 명령어 사용 가능, bash는 sh를 보완한 GNU Bourne Again Shell
+docker container exec -it <CONTAINER_ID/CONTAINER_NAME> sh
+ mv header.ejs _header.ejs 
+
+#12. 컨테이너에 파일 복사
+docker container cp header.ejs <CONTAINER_ID/CONTAINER_NAME>:/app/views/header.ejs
+# 호스트에 있는 파일을 이미지에 있는 파일에 복사 호스트 파일 : header.ejs 이미지 파일 : _header.ejs
+docker container cp ./guestbook/views/header.ejs guestbook-app:/app/views/_header.ejs
+# 컨테이너에서 호스트로 복사 chatGPT
+docker container cp guestbook-app:/app/views/_header.ejs ./backup/
+
+#13. 컨테이너 리소스 사용량 확인
+docker container stats <CONTAINER_ID/CONTAINER_NAME>
+docker container stats guestbook-app
