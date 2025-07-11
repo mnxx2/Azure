@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 0 1rem #ccc;
+}
+
+img {
+    width: 3vw;
+    height: 4vh;
+    padding: 1rem;
+    padding-left: 1.5rem;
+}
+
+h1 {
+    color: olivedrab;
+    font-size: 1.5rem;
+}

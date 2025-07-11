@@ -1,0 +1,40 @@
+.code-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.code-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.8rem;
+    padding: 0.2rem 0;
+    padding-top: 0.2rem;
+    margin-left: 3.3rem;
+    width: 90%;
+}
+
+.code-btn {
+    background-color: white;
+    padding: 0.6rem 0.8rem;
+    min-width: 110px;
+    /* border: 1px solid #91ba36; */
+    border-radius: 1.8rem;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.code-btn:hover {
+    cursor: pointer;
+    background-color: #91ba36;
+    color: white;
+}
+
+.dpt-msg {
+    text-align: left;
+    margin-left: 4rem;
+    font-size: large;
+}

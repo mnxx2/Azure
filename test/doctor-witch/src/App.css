@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Pretendard';
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  /* background: linear-gradient(180deg, white 40%, olivedrab 90%); */
+}

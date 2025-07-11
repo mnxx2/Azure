@@ -1,7 +1,10 @@
 #0. Dockerfile 확인
 #1. 도커 이미지 빌드
 docker image build ./firstNodeDockerApp -t firstnode-app:1.0
+# 현재 운영체제 환경으로 build
 docker build ./guestbook -t guestbook-app
+# 플랫폼을 지정해서 build : amd64 아키텍처
+docker image build --platform linux/amd64 ./guestbook -t guestbook-app:v2
 
 #2. 이미지 확인
 docker images

@@ -7,7 +7,7 @@ docker network ls
 
 #3. 네트워크 만들기
 docker network create test-net
-# -d 옵션으로 네트워크 드라이버 지정
+# -d 옵션으로 네트워크 드라이버 지정 : 생략하면 기본값인 bridge
 
 #4. 네트워크 상세 정보 확인
 docker network inspect test-net

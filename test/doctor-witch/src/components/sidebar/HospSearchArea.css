@@ -1,0 +1,27 @@
+.search-area {
+    width: 50%;
+}
+
+.load-msg {
+    width: 50%;
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 1.3rem;
+}
+
+.error-msg {
+    width: 50%;
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 1.3rem;
+}
+
+.search-bar {
+    height: 3rem;
+    /* 서치바 축소 x */
+    flex-shrink: 0;
+}
+
+.qus {
+    font-size: 1.3rem;
+}
