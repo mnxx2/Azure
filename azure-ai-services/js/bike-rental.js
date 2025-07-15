@@ -1,8 +1,9 @@
 // 필요한 모듈 import
 // endpoint, apikey, inputdata 설정
 const axios = require("axios");
+require("dotenv").config();
 const endPoint = `https://mlws-hnzxt.koreacentral.inference.ml.azure.com/score`;
-const apikey = `bike-rental-azure-key`;
+const apikey = process.env.bike_rental_api_key;
 
 const inputData = {
   input_data: {
