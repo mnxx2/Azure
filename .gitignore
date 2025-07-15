@@ -21,3 +21,6 @@ Thumbs.db
 node_modules/
 *.pyc
 __pycache__/
+
+# env 파일
+.env
