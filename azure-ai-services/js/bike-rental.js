@@ -2,7 +2,7 @@
 // endpoint, apikey, inputdata 설정
 const axios = require("axios");
 const endPoint = `https://mlws-hnzxt.koreacentral.inference.ml.azure.com/score`;
-const apikey = `azure api key`;
+const apikey = `bike-rental-azure-key`;
 const inputData = {
   input_data: {
     columns: [
